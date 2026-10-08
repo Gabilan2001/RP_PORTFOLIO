@@ -6,8 +6,8 @@ export const projectInfo = {
   faculty: "Faculty of Computing",
   year: "2026",
   groupCode: "R26-SE-032",
-  supervisor: "Name of Supervisor",
-  coSupervisor: "Name of Co-Supervisor",
+  supervisor: "Bimal Gunapala",
+  coSupervisor: "Eishan Weerasinghe",
 };
 
 export const team = [
