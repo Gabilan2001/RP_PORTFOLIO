@@ -1,0 +1,80 @@
+export const projectInfo = {
+  title: "TomatoDoc",
+  subtitle: "AI-Powered Tomato Plant Health Monitoring System",
+  tagline: "Helping Sri Lankan tomato farmers detect crop problems earlier, treat smarter, and sell at the right time.",
+  university: "Sri Lanka Institute of Information Technology",
+  faculty: "Faculty of Computing",
+  year: "2026",
+  groupCode: "R26-SE-032",
+  supervisor: "Name of Supervisor",
+  coSupervisor: "Name of Co-Supervisor",
+};
+
+export const team = [
+  { name: "Sivanesangabilan Gabilan", id: "IT22060426", role: "Team Leader", component: "Nutrient Deficiency and Fruit Disease Detection", email: "it22060426@my.sliit.lk", initials: "SG" },
+  { name: "A.L.M. Farthas", id: "IT22190734", role: "Member", component: "Leaf Disease Detection with Co-occurrence Awareness", email: "it22190734@my.sliit.lk", initials: "AF" },
+  { name: "Vithusha Pathmanathan", id: "IT22208262", role: "Member", component: "Disease Treatment Efficacy Monitoring", email: "IT22208262@my.sliit.lk", initials: "VP" },
+  { name: "Rashad M.P.M", id: "IT22295842", role: "Member", component: "Tomato Market Price Forecasting", email: "it22295842@my.sliit.lk", initials: "RM" },
+];
+
+export const components = [
+  { number: "01", title: "Nutrient Deficiency Detection", description: "MobileNetV2 transfer learning model that detects six types of tomato leaf nutrient deficiency from a smartphone photograph. Classes are Nitrogen, Potassium, Phosphorus, Iron Deficiency, N+K Combined, and Healthy.", tech: ["MobileNetV2", "PyTorch", "Transfer Learning", "Flask", "RAG"], accuracy: "93.30%", accuracyLabel: "Test Accuracy", gap: "0.92%", gapLabel: "Train-Val Gap", color: "green" },
+  { number: "02", title: "Fruit Disease Detection", description: "Second MobileNetV2 model that detects five fruit disease classes from tomato fruit photographs. Classes are Anthracnose, Bacterial Spot, Blossom End Rot, Spotted Wilt Virus, and Healthy Tomato.", tech: ["MobileNetV2", "PyTorch", "Transfer Learning", "Flask"], accuracy: "93.14%", accuracyLabel: "Test Accuracy", gap: "2.97%", gapLabel: "Train-Val Gap", color: "red" },
+  { number: "03", title: "Leaf Disease Co-occurrence Detection", description: "YOLOv8s object detection model that localises disease symptoms at the lesion level across four classes. Detects Early Blight and Late Blight simultaneously on the same leaf and reports both conditions.", tech: ["YOLOv8s", "EfficientNet-B0", "ChromaDB", "Groq", "RAG"], accuracy: "0.737", accuracyLabel: "mAP@0.5", gap: "76.3%", gapLabel: "Co-occurrence Rate", color: "yellow" },
+  { number: "04", title: "Treatment Efficacy Monitoring", description: "U-Net semantic segmentation model that tracks disease severity as a pixel percentage over a seven-day treatment window. Classifies treatment response as Improving, Stable, Worsening, or Recovering.", tech: ["U-Net", "ResNet34", "FastAPI", "SQLite", "OpenWeatherMap"], accuracy: "75-80%", accuracyLabel: "Completion", gap: "Day 1/3/7", gapLabel: "Monitoring Window", color: "blue" },
+  { number: "05", title: "Market Price Forecasting", description: "Six forecasting models including LSTM, GRU, XGBoost, Random Forest, ARIMA, and SARIMA that predict tomato market prices and recommend the best time to sell with SHAP-based explanations.", tech: ["LSTM", "GRU", "XGBoost", "SHAP", "Flask", "PostgreSQL"], accuracy: "6 Models", accuracyLabel: "Forecasting Models", gap: "MAE/RMSE/MAPE", gapLabel: "Evaluation Metrics", color: "purple" },
+];
+
+export const results = [
+  { label: "Nutrient Model Test Accuracy", value: "93.30%", color: "green", description: "MobileNetV2 Model 1 on 94 test images" },
+  { label: "Fruit Disease Test Accuracy", value: "93.14%", color: "red", description: "MobileNetV2 Model 2 on 481 test images" },
+  { label: "YOLOv8s mAP@0.5", value: "0.737", color: "yellow", description: "Four class leaf disease detection" },
+  { label: "Co-occurrence Detection", value: "76.3%", color: "blue", description: "38 image co-occurrence test partition" },
+  { label: "Leaf Gate Accuracy", value: "98.67%", color: "purple", description: "EfficientNet-B0 independent test" },
+  { label: "Train-Val Gap Model 1", value: "0.92%", color: "green", description: "Confirms no overfitting" },
+];
+
+export const architectureComparison = [
+  { model: "CNN from Scratch", leafAcc: "43.21%", fruitAcc: "41.87%", size: "8 MB", selected: false },
+  { model: "VGG16", leafAcc: "89.87%", fruitAcc: "88.34%", size: "528 MB", selected: false },
+  { model: "ResNet50", leafAcc: "91.24%", fruitAcc: "90.64%", size: "102 MB", selected: false },
+  { model: "MobileNetV2", leafAcc: "93.30%", fruitAcc: "93.14%", size: "14 MB", selected: true },
+];
+
+export const milestones = [
+  { date: "July 2024", title: "Project Topic Assessment", description: "Initial topic assessment submitted including research problem, objectives, and task breakdown.", completed: true },
+  { date: "August 2024", title: "Project Proposal Presentation", description: "Proposed research presented to panel of judges at SLIIT.", completed: true },
+  { date: "August 2024", title: "Project Proposal Report", description: "In-depth analysis and proposed solution submitted as formal report.", completed: true },
+  { date: "December 2024", title: "Progress Presentation 1", description: "Evaluation of 50% completion of the proposed solution.", completed: true },
+  { date: "February 2025", title: "Research Paper Draft", description: "Draft research paper submitted for supervisor review.", completed: true },
+  { date: "March 2026", title: "Final Thesis Submission", description: "Group and individual thesis documents submitted for evaluation.", completed: true },
+  { date: "March 2026", title: "Progress Presentation 2", description: "Evaluation of 90% project completion.", completed: true },
+  { date: "May 2026", title: "Final Presentation and Viva", description: "Final evaluation of the completed product by judges.", completed: false },
+];
+
+export const technologies = [
+  { name: "React Native", category: "Mobile Frontend" }, { name: "Flask", category: "Backend API" }, { name: "FastAPI", category: "Backend API" }, { name: "PyTorch 2.5.1", category: "AI Framework" }, { name: "MobileNetV2", category: "AI Model" }, { name: "YOLOv8s", category: "AI Model" }, { name: "U-Net ResNet34", category: "AI Model" }, { name: "ChromaDB", category: "Vector Database" }, { name: "MongoDB Atlas", category: "Database" }, { name: "SQLite", category: "Database" }, { name: "Groq Llama 3 8B", category: "LLM" }, { name: "LSTM", category: "Deep Learning" }, { name: "XGBoost", category: "Machine Learning" }, { name: "SHAP", category: "Explainable AI" }, { name: "JWT Auth", category: "Security" }, { name: "Render.com", category: "Deployment" },
+];
+
+export const researchDomain = {
+  background: "Tomato cultivation is one of the most economically important agricultural activities in Sri Lanka. However, smallholder farmers consistently face challenges that span the entire crop production cycle. Nutrient deficiencies such as Nitrogen, Potassium, Phosphorus, and Iron all cause similar leaf yellowing symptoms, making accurate visual diagnosis nearly impossible without laboratory testing. Fruit diseases including Anthracnose, Bacterial Spot, Blossom End Rot, and Spotted Wilt Virus cause 30 to 40 percent post-harvest losses annually. Leaf diseases like Early Blight and Late Blight frequently appear together on the same leaf, yet most detection systems can only return one label per image. Market price volatility makes selling decisions extremely difficult, with prices recorded swinging from LKR 7 to LKR 220 per kilogram within the same season.",
+  gap: "Our systematic search across eight major platforms including Kaggle, Roboflow, Mendeley Data, Zenodo, IEEE Dataport, GitHub, HuggingFace, and Figshare confirmed that no publicly available dataset exists for Phosphorus deficiency in tomato leaves. Additionally, no existing system combines nutrient deficiency detection, co-occurrence-aware leaf disease detection, treatment efficacy monitoring, and market price forecasting in a single unified platform designed for Sri Lankan tomato farmers. TomatoDoc is the first system to address all four problems together.",
+  problem: "Sri Lankan tomato farmers have no affordable, accessible tool that can diagnose plant health problems from a smartphone photograph, track whether treatment is working, and advise when to sell their harvest for maximum profit - all in one place.",
+  objectives: ["Detect six tomato leaf nutrient deficiency classes using MobileNetV2 Transfer Learning with 93 percent or higher test accuracy", "Detect and localise leaf disease symptoms including co-occurring conditions using YOLOv8s object detection", "Monitor seven-day treatment response using U-Net pixel-level severity segmentation and classify treatment outcome", "Forecast tomato market prices using LSTM and XGBoost with SHAP-based explainable sell or hold recommendations"],
+};
+
+export const documents = [
+    { title: "Proposal Report - IT22060426", category: "Proposal", link: "/documents/proposal-it22060426.pdf" },
+    { title: "Proposal Report - IT22190734", category: "Proposal", link: "#" },
+    { title: "Proposal Report - IT22208262", category: "Proposal", link: "#" },
+    { title: "Proposal Report - IT22295842", category: "Proposal", link: "#" },
+    { title: "Final Report - IT22060426", category: "Final Report", link: "#" },
+    { title: "Final Report - IT22190734", category: "Final Report", link: "#" },
+    { title: "Final Report - IT22208262", category: "Final Report", link: "#" },
+    { title: "Final Report - IT22295842", category: "Final Report", link: "#" },
+    { title: "Final Group Report", category: "Final Report", link: "#" },
+    { title: "Progress Presentation 1", category: "Presentation", link: "#" },
+    { title: "Progress Presentation 2", category: "Presentation", link: "#" },
+    { title: "Final Presentation", category: "Presentation", link: "#" },
+    { title: "Research Paper", category: "Research", link: "#" },
+];

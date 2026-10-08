@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #1e3027;
+  background: #fbfaf5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+* { box-sizing: border-box; }
+.eyebrow { color: #6b9c52; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; }
+.section-title { color: #1e3027; font-size: clamp(2.5rem, 5vw, 4.75rem); font-weight: 800; letter-spacing: -.06em; line-height: .98; }
+.section-title span { color: #72a94b; }
+.float-animation { animation: float 3s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
