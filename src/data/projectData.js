@@ -8,6 +8,8 @@ export const projectInfo = {
   groupCode: "R26-SE-032",
   supervisor: "Bimal Gunapala",
   coSupervisor: "Eishan Weerasinghe",
+  supervisorEmail: "bimal.g@sliit.lk",
+  coSupervisorEmail: "eishan.w@sliit.lk",
 };
 
 export const team = [
@@ -42,14 +44,14 @@ export const architectureComparison = [
 ];
 
 export const milestones = [
-  { date: "July 2024", title: "Project Topic Assessment", description: "Initial topic assessment submitted including research problem, objectives, and task breakdown.", completed: true },
-  { date: "August 2024", title: "Project Proposal Presentation", description: "Proposed research presented to panel of judges at SLIIT.", completed: true },
-  { date: "August 2024", title: "Project Proposal Report", description: "In-depth analysis and proposed solution submitted as formal report.", completed: true },
-  { date: "December 2024", title: "Progress Presentation 1", description: "Evaluation of 50% completion of the proposed solution.", completed: true },
-  { date: "February 2025", title: "Research Paper Draft", description: "Draft research paper submitted for supervisor review.", completed: true },
-  { date: "March 2026", title: "Final Thesis Submission", description: "Group and individual thesis documents submitted for evaluation.", completed: true },
-  { date: "March 2026", title: "Progress Presentation 2", description: "Evaluation of 90% project completion.", completed: true },
-  { date: "May 2026", title: "Final Presentation and Viva", description: "Final evaluation of the completed product by judges.", completed: false },
+  { date: "July 2024", title: "Project Topic Assessment", marks: "Pass or Fail", description: "Initial topic assessment submitted including research problem, objectives, and task breakdown.", details: "Research area confirmed as AI for tomato crop management.", status: "completed", completed: true },
+  { date: "August 2024", title: "Project Proposal Presentation", marks: "10%", description: "Proposed research presented to panel of judges at SLIIT.", details: "Presented the TomatoDoc system concept, datasets, and methodology to the evaluation panel.", status: "completed", completed: true },
+  { date: "August 2024", title: "Project Proposal Report", marks: "10%", description: "In-depth analysis and proposed solution submitted as formal report.", details: "Individual proposal reports covered the literature survey, research gap, and planned methodology.", status: "completed", completed: true },
+  { date: "December 2024", title: "Progress Presentation 1", marks: "15%", description: "Evaluation of 50% completion of the proposed solution.", details: "Demonstrated initial model training results, dataset collection, and early mobile prototype.", status: "completed", completed: true },
+  { date: "February 2025", title: "Research Paper Draft", marks: "Pass or Fail", description: "Draft research paper submitted for supervisor review.", details: "Group research paper drafted with preliminary experimental results from all components.", status: "completed", completed: true },
+  { date: "March 2026", title: "Final Thesis Submission", marks: "Pass or Fail", description: "Group and individual thesis documents submitted for evaluation.", details: "All individual thesis reports and the group thesis submitted to the department.", status: "completed", completed: true },
+  { date: "March 2026", title: "Progress Presentation 2", marks: "25%", description: "Evaluation of 90% project completion.", details: "Demonstrated the completed mobile application with all four AI components integrated.", status: "completed", completed: true },
+  { date: "May 2026", title: "Final Presentation and Viva", marks: "40%", description: "Final evaluation of the completed product by judges.", details: "Final demonstration of TomatoDoc to the evaluation panel, including a live demo and Q&A.", status: "upcoming", completed: false },
 ];
 
 export const technologies = [
@@ -63,18 +65,48 @@ export const researchDomain = {
   objectives: ["Detect six tomato leaf nutrient deficiency classes using MobileNetV2 Transfer Learning with 93 percent or higher test accuracy", "Detect and localise leaf disease symptoms including co-occurring conditions using YOLOv8s object detection", "Monitor seven-day treatment response using U-Net pixel-level severity segmentation and classify treatment outcome", "Forecast tomato market prices using LSTM and XGBoost with SHAP-based explainable sell or hold recommendations"],
 };
 
-export const documents = [
-    { title: "Proposal Report - IT22060426", category: "Proposal", link: "/documents/proposal-it22060426.pdf" },
-    { title: "Proposal Report - IT22190734", category: "Proposal", link: "#" },
-    { title: "Proposal Report - IT22208262", category: "Proposal", link: "#" },
-    { title: "Proposal Report - IT22295842", category: "Proposal", link: "#" },
-    { title: "Final Report - IT22060426", category: "Final Report", link: "#" },
-    { title: "Final Report - IT22190734", category: "Final Report", link: "#" },
-    { title: "Final Report - IT22208262", category: "Final Report", link: "#" },
-    { title: "Final Report - IT22295842", category: "Final Report", link: "#" },
-    { title: "Final Group Report", category: "Final Report", link: "#" },
-    { title: "Progress Presentation 1", category: "Presentation", link: "#" },
-    { title: "Progress Presentation 2", category: "Presentation", link: "#" },
-    { title: "Final Presentation", category: "Presentation", link: "#" },
-    { title: "Research Paper", category: "Research", link: "#" },
+export const literatureSurvey = [
+  { reference: "[1]", authors: "S. P. Mohanty, D. P. Hughes, and M. Salathe", title: "Using deep learning for image-based plant disease detection", journal: "Frontiers in Plant Science", year: "2016", summary: "Demonstrated CNN classification of 26 crop diseases with high accuracy under controlled conditions." },
+  { reference: "[2]", authors: "J. G. A. Barbedo", title: "Factors influencing deep learning for plant disease recognition", journal: "Biosystems Engineering", year: "2018", summary: "Found that field conditions reduce performance due to clutter, overlapping symptoms, and uneven lighting." },
+  { reference: "[3]", authors: "M. Brahimi, K. Boukhalfa, and A. Moussaoui", title: "Deep learning for tomato diseases", journal: "Applied Artificial Intelligence", year: "2017", summary: "Confirmed CNN superiority over classical machine learning for tomato disease classification." },
+  { reference: "[4]", authors: "K. P. Ferentinos", title: "Deep learning models for plant disease detection", journal: "Computers and Electronics in Agriculture", year: "2018", summary: "Showed that ImageNet pretrained models generalise well on small agricultural datasets." },
+  { reference: "[5]", authors: "A. Kamilaris and F. X. Prenafeta-Boldu", title: "Deep learning in agriculture: A survey", journal: "Computers and Electronics in Agriculture", year: "2018", summary: "Identified MobileNet variants as useful for mobile agricultural deployment." },
 ];
+
+export const methodology = [
+  { step: "01", title: "Dataset Collection", description: "Collected tomato leaf nutrient deficiency and fruit disease images from public agricultural datasets." },
+  { step: "02", title: "Data Preprocessing", description: "Split datasets before augmentation and applied image transformations to training data only." },
+  { step: "03", title: "Model Training", description: "Compared CNN Scratch, VGG16, ResNet50, and MobileNetV2 before selecting the mobile-friendly model." },
+  { step: "04", title: "Object Detection", description: "Trained YOLOv8s to localise multiple leaf disease symptoms and report co-occurring conditions." },
+  { step: "05", title: "Treatment Monitoring", description: "Used U-Net segmentation to estimate disease severity across a seven-day monitoring window." },
+  { step: "06", title: "Price Forecasting", description: "Compared ARIMA, SARIMA, Random Forest, XGBoost, LSTM, and GRU forecasting models." },
+  { step: "07", title: "RAG System", description: "Connected ChromaDB and Groq Llama to generate treatment advice grounded in agricultural guidelines." },
+  { step: "08", title: "Mobile Application", description: "Integrated all AI components through Flask and FastAPI APIs in a React Native application." },
+];
+
+export const documents = [
+  { title: "Proposal Report - IT22060426", id: "IT22060426", category: "Proposal", link: "/documents/proposal-it22060426.pdf" },
+  { title: "Proposal Report - IT22190734", id: "IT22190734", category: "Proposal", link: "/documents/proposal-it22190734.pdf" },
+  { title: "Proposal Report - IT22208262", id: "IT22208262", category: "Proposal", link: "/documents/proposal-it22208262.pdf" },
+  { title: "Proposal Report - IT22295842", id: "IT22295842", category: "Proposal", link: "/documents/proposal-it22295842.pdf" },
+  { title: "Final Report - IT22060426", id: "IT22060426", category: "Final Report", link: "/documents/final-it22060426.pdf" },
+  { title: "Final Report - IT22190734", id: "IT22190734", category: "Final Report", link: "/documents/final-it22190734.pdf" },
+  { title: "Final Report - IT22208262", id: "IT22208262", category: "Final Report", link: "/documents/final-it22208262.pdf" },
+  { title: "Final Report - IT22295842", id: "IT22295842", category: "Final Report", link: "/documents/final-it22295842.pdf" },
+  { title: "Final Group Report", id: "GROUP", category: "Final Report", link: "/documents/final-group-report.pdf" },
+  { title: "Research Paper", id: "GROUP", category: "Other", link: "/documents/research-paper.pdf" },
+  { title: "Checklist Document", id: "GROUP", category: "Other", link: "/documents/checklist-document.pdf" },
+  { title: "Project Charter", id: "GROUP", category: "Other", link: "/documents/project-charter.pdf" },
+];
+
+export const presentations = [
+  { title: "Proposal Presentation", date: "August 2024", link: "/documents/proposal-presentation.pdf", status: "available" },
+  { title: "Progress Presentation 1", date: "December 2024", link: "/documents/progress-presentation-1.pdf", status: "available" },
+  { title: "Progress Presentation 2", date: "March 2026", link: "/documents/progress-presentation-2.pdf", status: "available" },
+  { title: "Final Presentation", date: "May 2026", link: "/documents/final-presentation.pdf", status: "upcoming" },
+];
+
+export const contactInfo = {
+  email: "sivanesangabilan2001@gmail.com",
+  department: "Department of Software Engineering",
+};
