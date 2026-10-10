@@ -1,7 +1,7 @@
 import { ArrowDown, ExternalLink } from "lucide-react";
 import { projectInfo } from "../data/projectData";
 
-const stats = [["93.30%", "Leaf Accuracy"], ["93.14%", "Fruit Accuracy"], ["0.737", "mAP Score"], ["76.3%", "Co-occurrence"]];
+const stats = [["93.30%", "Leaf Accuracy"], ["93.14%", "Fruit Accuracy"], ["0.737", "Leaf Disease mAP@0.5"], ["0.723", "Leaf Disease F1"]];
 
 export default function Hero() {
   return (
