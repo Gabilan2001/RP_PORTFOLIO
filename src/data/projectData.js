@@ -22,7 +22,7 @@ export const team = [
 export const components = [
   { number: "01", title: "Nutrient Deficiency Detection", description: "MobileNetV2 transfer learning model that detects six types of tomato leaf nutrient deficiency from a smartphone photograph. Classes are Nitrogen, Potassium, Phosphorus, Iron Deficiency, N+K Combined, and Healthy.", tech: ["MobileNetV2", "PyTorch", "Transfer Learning", "Flask", "RAG"], accuracy: "93.30%", accuracyLabel: "Test Accuracy", gap: "0.92%", gapLabel: "Train-Val Gap", color: "green" },
   { number: "02", title: "Fruit Disease Detection", description: "Second MobileNetV2 model that detects five fruit disease classes from tomato fruit photographs. Classes are Anthracnose, Bacterial Spot, Blossom End Rot, Spotted Wilt Virus, and Healthy Tomato.", tech: ["MobileNetV2", "PyTorch", "Transfer Learning", "Flask"], accuracy: "93.14%", accuracyLabel: "Test Accuracy", gap: "2.97%", gapLabel: "Train-Val Gap", color: "red" },
-  { number: "03", title: "Leaf Disease Co-occurrence Detection", description: "YOLOv8s object detection model that localises disease symptoms at the lesion level across four classes. Detects Early Blight and Late Blight simultaneously on the same leaf and reports both conditions.", tech: ["YOLOv8s", "EfficientNet-B0", "ChromaDB", "Groq", "RAG"], accuracy: "0.737", accuracyLabel: "mAP@0.5", gap: "76.3%", gapLabel: "Co-occurrence Rate", color: "yellow" },
+  { number: "03", title: "Leaf Disease Detection with Co-occurrence Awareness", description: "YOLOv8s model that localises Early Blight, Late Blight, and Leaf Miner symptoms, and healthy tissue, at the lesion level so that several conditions can be reported for one leaf. A retrieval-augmented module then gives treatment advice from named agricultural sources.", tech: ["YOLOv8s", "ChromaDB", "Gemini", "RAG"], accuracy: "0.737", accuracyLabel: "mAP@0.5", gap: "0.723", gapLabel: "F1 Score", color: "yellow" },
   { number: "04", title: "Treatment Efficacy Monitoring", description: "U-Net semantic segmentation model that tracks disease severity as a pixel percentage over a seven-day treatment window. Classifies treatment response as Improving, Stable, Worsening, or Recovering.", tech: ["U-Net", "ResNet34", "FastAPI", "SQLite", "OpenWeatherMap"], accuracy: "75-80%", accuracyLabel: "Completion", gap: "Day 1/3/7", gapLabel: "Monitoring Window", color: "blue" },
   { number: "05", title: "Market Price Forecasting", description: "Deep sequential forecasting engine utilizing Direct Multi-Output Bidirectional LSTM corroborated with exogenous agro-meteorological indicators across major Sri Lankan DECs to provide multi-horizon price projections and SHAP-based explainability.", tech: ["BiLSTM", "LSTM", "GRU", "XGBoost", "SHAP", "FastAPI / Flask", "PostgreSQL"], accuracy: "< 8.5% MAPE", accuracyLabel: "14-Day Horizon Error", gap: "4 DECs / < 85ms", gapLabel: "Coverage & Latency", color: "purple" },
 ];
@@ -30,9 +30,9 @@ export const components = [
 export const results = [
   { label: "Nutrient Model Test Accuracy", value: "93.30%", color: "green", description: "MobileNetV2 Model 1 on 94 test images" },
   { label: "Fruit Disease Test Accuracy", value: "93.14%", color: "red", description: "MobileNetV2 Model 2 on 481 test images" },
-  { label: "YOLOv8s mAP@0.5", value: "0.737", color: "yellow", description: "Four class leaf disease detection" },
-  { label: "Co-occurrence Detection", value: "76.3%", color: "blue", description: "38 image co-occurrence test partition" },
-  { label: "Leaf Gate Accuracy", value: "98.67%", color: "purple", description: "EfficientNet-B0 independent test" },
+  { label: "YOLOv8s mAP@0.5", value: "0.737", color: "yellow", description: "Four class leaf disease detection on 241 test images" },
+  { label: "YOLOv8s F1 Score", value: "0.723", color: "blue", description: "Overall test F1 across four leaf classes" },
+  { label: "YOLOv8s Precision", value: "0.758", color: "purple", description: "Overall test precision across four leaf classes" },
   { label: "Train-Val Gap Model 1", value: "0.92%", color: "green", description: "Confirms no overfitting" },
   { label: "Price Forecast Best MAPE", value: "7.95%", color: "purple", description: "Direct BiLSTM across 14-day horizon" },
   { label: "Price Inference Latency", value: "< 85ms", color: "green", description: "Containerized Flask/FastAPI microservice" },
@@ -59,15 +59,49 @@ export const milestones = [
 ];
 
 export const technologies = [
-  { name: "React Native", category: "Mobile Frontend" }, { name: "Flask", category: "Backend API" }, { name: "FastAPI", category: "Backend API" }, { name: "PyTorch 2.5.1", category: "AI Framework" }, { name: "MobileNetV2", category: "AI Model" }, { name: "YOLOv8s", category: "AI Model" }, { name: "U-Net ResNet34", category: "AI Model" }, { name: "ChromaDB", category: "Vector Database" }, { name: "MongoDB Atlas", category: "Database" }, { name: "SQLite", category: "Database" }, { name: "Groq Llama 3 8B", category: "LLM" }, { name: "LSTM", category: "Deep Learning" }, { name: "XGBoost", category: "Machine Learning" }, { name: "SHAP", category: "Explainable AI" }, { name: "JWT Auth", category: "Security" }, { name: "Render.com", category: "Deployment" }, { name: "PostgreSQL", category: "Database" }, { name: "BiLSTM / GRU", category: "Deep Sequential Model" },
+  { name: "React Native", category: "Mobile Frontend" }, { name: "Flask", category: "Backend API" }, { name: "FastAPI", category: "Backend API" }, { name: "PyTorch 2.5.1", category: "AI Framework" }, { name: "MobileNetV2", category: "AI Model" }, { name: "YOLOv8s", category: "AI Model" }, { name: "U-Net ResNet34", category: "AI Model" }, { name: "ChromaDB", category: "Vector Database" }, { name: "MongoDB Atlas", category: "Database" }, { name: "SQLite", category: "Database" }, { name: "Groq Llama 3 8B", category: "LLM" }, { name: "Gemini", category: "LLM" }, { name: "Google Cloud Run", category: "Deployment" }, { name: "Firestore", category: "Database" }, { name: "LSTM", category: "Deep Learning" }, { name: "XGBoost", category: "Machine Learning" }, { name: "SHAP", category: "Explainable AI" }, { name: "JWT Auth", category: "Security" }, { name: "Render.com", category: "Deployment" }, { name: "PostgreSQL", category: "Database" }, { name: "BiLSTM / GRU", category: "Deep Sequential Model" },
 ];
 
 export const researchDomain = {
-  background: "Tomato cultivation is one of the most economically important agricultural activities in Sri Lanka. However, smallholder farmers consistently face challenges that span the entire crop production cycle. Nutrient deficiencies such as Nitrogen, Potassium, Phosphorus, and Iron all cause similar leaf yellowing symptoms, making accurate visual diagnosis nearly impossible without laboratory testing. Fruit diseases including Anthracnose, Bacterial Spot, Blossom End Rot, and Spotted Wilt Virus cause 30 to 40 percent post-harvest losses annually. Leaf diseases like Early Blight and Late Blight frequently appear together on the same leaf, yet most detection systems can only return one label per image. Market price volatility makes selling decisions extremely difficult, with prices recorded swinging from LKR 7 to LKR 220 per kilogram within the same season.",
+  background: "Tomato cultivation is one of the most economically important agricultural activities in Sri Lanka. However, smallholder farmers consistently face challenges that span the entire crop production cycle. Nutrient deficiencies such as Nitrogen, Potassium, Phosphorus, and Iron all cause similar leaf yellowing symptoms, making accurate visual diagnosis nearly impossible without laboratory testing. Fruit diseases including Anthracnose, Bacterial Spot, Blossom End Rot, and Spotted Wilt Virus cause 30 to 40 percent post-harvest losses annually. Leaf diseases like Early Blight and Late Blight can appear together on the same leaf, yet most detection systems can only return one label per image. Market price volatility makes selling decisions extremely difficult, with prices recorded swinging from LKR 7 to LKR 220 per kilogram within the same season.",
   gap: "Our systematic search across eight major platforms including Kaggle, Roboflow, Mendeley Data, Zenodo, IEEE Dataport, GitHub, HuggingFace, and Figshare confirmed that no publicly available dataset exists for Phosphorus deficiency in tomato leaves. Additionally, no existing system combines nutrient deficiency detection, co-occurrence-aware leaf disease detection, treatment efficacy monitoring, and market price forecasting in a single unified platform designed for Sri Lankan tomato farmers. TomatoDoc is the first system to address all four problems together.",
   problem: "Sri Lankan tomato farmers have no affordable, accessible tool that can diagnose plant health problems from a smartphone photograph, track whether treatment is working, and advise when to sell their harvest for maximum profit - all in one place.",
-  objectives: ["Detect six tomato leaf nutrient deficiency classes using MobileNetV2 Transfer Learning with 93 percent or higher test accuracy", "Detect and localise leaf disease symptoms including co-occurring conditions using YOLOv8s object detection", "Monitor seven-day treatment response using U-Net pixel-level severity segmentation and classify treatment outcome", "Forecast wholesale tomato market prices across 1 to 14-day horizons using Direct Multi-Output BiLSTM, LSTM, and XGBoost corroborated with agro-meteorological features and SHAP-based explainable recommendations"],
+  objectives: ["Detect six tomato leaf nutrient deficiency classes using MobileNetV2 Transfer Learning with 93 percent or higher test accuracy", "Detect and localise Early Blight, Late Blight, and Leaf Miner symptoms on tomato leaves using YOLOv8s, report several conditions for one leaf, and recommend treatment from verified agricultural sources", "Monitor seven-day treatment response using U-Net pixel-level severity segmentation and classify treatment outcome", "Forecast wholesale tomato market prices across 1 to 14-day horizons using Direct Multi-Output BiLSTM, LSTM, and XGBoost corroborated with agro-meteorological features and SHAP-based explainable recommendations"],
 };
+
+// Component-wise details. Each entry is shown on the Domain page; teammates can add their own component in the same format.
+export const subProblems = [
+  { component: "Component 2 - Leaf Disease Detection with Co-occurrence Awareness", text: "Early Blight, Late Blight, and leaf miner damage can appear on the same tomato leaf, but most tools return a single label and give treatment advice that is not linked to a verified source." },
+];
+
+export const componentObjectives = [
+  {
+    component: "Component 2 - Leaf Disease Detection with Co-occurrence Awareness",
+    owner: "A.L.M. Farthas (IT22190734)",
+    main: "Detect and localise Early Blight, Late Blight, and Leaf Miner symptoms on tomato leaves, so that several conditions can be reported for one leaf, and recommend treatment from verified agricultural sources.",
+    sub: [
+      "Build a symptom-level, four-class leaf dataset (Early Blight, Late Blight, Leaf Miner, Healthy).",
+      "Train YOLOv8 variants, compare them on the validation set, and select the model for deployment.",
+      "Evaluate detection with precision, recall, F1, and mAP, overall and for each class.",
+      "Generate treatment advice from a curated, source-tagged knowledge base using retrieval-augmented generation.",
+      "Deploy the detector and advice service as a cloud API used by the mobile application.",
+    ],
+    novelty: "Each symptom is localised with its own bounding box, so several conditions can be shown on one leaf without training images labelled with disease combinations. Treatment advice is retrieved from named agricultural sources (Department of Agriculture Sri Lanka, peer-reviewed studies, and extension guidance) and states when guidance is general.",
+  },
+];
+
+export const componentMethodology = [
+  {
+    component: "Component 2 - Leaf Disease Detection with Co-occurrence Awareness",
+    steps: [
+      { step: "1", title: "Data", description: "Collected tomato leaf images from public sources, annotated symptoms with bounding boxes (leaf miner re-annotated at tunnel level), removed duplicate images, and split the data 80/10/10 into training, validation, and test sets." },
+      { step: "2", title: "Model", description: "Trained YOLOv8n, YOLOv8s, and YOLOv8m under identical settings from COCO-pretrained weights, compared them on the validation set, and selected YOLOv8s." },
+      { step: "3", title: "Evaluation", description: "Reported precision, recall, F1, and mAP overall and per class on the test split, with a confusion analysis of missed detections." },
+      { step: "4", title: "Treatment advice", description: "Built a source-tagged knowledge base, embedded it with a sentence-embedding model into ChromaDB, and used a Gemini model restricted to the retrieved text to write the advice." },
+      { step: "5", title: "Deployment", description: "Packaged the detector and advice service with Docker on Google Cloud Run and connected it to the React Native mobile application." },
+    ],
+  },
+];
 
 export const literatureSurvey = [
   { reference: "[1]", authors: "S. P. Mohanty, D. P. Hughes, and M. Salathe", title: "Using deep learning for image-based plant disease detection", journal: "Frontiers in Plant Science", year: "2016", summary: "Demonstrated CNN classification of 26 crop diseases with high accuracy under controlled conditions." },
@@ -77,16 +111,20 @@ export const literatureSurvey = [
   { reference: "[5]", authors: "A. Kamilaris and F. X. Prenafeta-Boldu", title: "Deep learning in agriculture: A survey", journal: "Computers and Electronics in Agriculture", year: "2018", summary: "Identified MobileNet variants as useful for mobile agricultural deployment." },
   { reference: "[6]", authors: "L. Zhang, et al.", title: "Agricultural commodity price forecasting using deep learning with multi-source factors", journal: "Computers and Electronics in Agriculture", year: "2021", summary: "Demonstrated that combining recurrent neural architectures (LSTM/BiLSTM) with exogenous weather features significantly reduces multi-step forecasting error compared to univariate baselines." },
   { reference: "[7]", authors: "S. M. Lundberg and S.-I. Lee", title: "A unified approach to interpreting model predictions", journal: "Advances in Neural Information Processing Systems (NeurIPS)", year: "2017", summary: "Formulated SHAP framework to explain complex machine learning predictions, enabling transparent feature importance ranking for agricultural decision support." },
+  { reference: "[8]", authors: "S. M. Brouwer, P. J. Wolters, E. Andreasson, E. Liljeroth, V. G. A. A. Vleeshouwers, and L. J. Grenville-Briggs", title: "Double trouble: co-infection of potato with the causal agents of late and early blight", journal: "Plant Pathology", year: "2023", summary: "Showed that the Early Blight and Late Blight pathogens can coexist and develop together on the same host plant." },
+  { reference: "[9]", authors: "M. Nurullah, R. Hodhod, H. Carroll, and Y. Zhou", title: "Advancing multi-label tomato leaf disease identification using vision transformer and EfficientNet with explainable AI techniques", journal: "Electronics", year: "2025", summary: "Recognised several tomato leaf conditions per image through multi-label classification, without locating each symptom." },
+  { reference: "[10]", authors: "G. Jocher, A. Chaurasia, and J. Qiu", title: "YOLO by Ultralytics", journal: "Ultralytics (software)", year: "2023", summary: "Provides the YOLOv8 detector family used to draw a bounding box around each symptom." },
+  { reference: "[11]", authors: "P. Lewis, et al.", title: "Retrieval-augmented generation for knowledge-intensive NLP tasks", journal: "Advances in Neural Information Processing Systems (NeurIPS)", year: "2020", summary: "Introduced retrieval-augmented generation, which grounds language model answers in an external knowledge base." },
 ];
 
 export const methodology = [
   { step: "01", title: "Dataset Collection", description: "Collected tomato leaf nutrient deficiency and fruit disease images from public agricultural datasets." },
   { step: "02", title: "Data Preprocessing", description: "Split datasets before augmentation and applied image transformations to training data only." },
   { step: "03", title: "Model Training", description: "Compared CNN Scratch, VGG16, ResNet50, and MobileNetV2 before selecting the mobile-friendly model." },
-  { step: "04", title: "Object Detection", description: "Trained YOLOv8s to localise multiple leaf disease symptoms and report co-occurring conditions." },
+  { step: "04", title: "Object Detection", description: "Trained YOLOv8 variants on a symptom-level, four-class leaf dataset, compared them on the validation set, and selected YOLOv8s. Each symptom is reported with its own bounding box, so Early Blight, Late Blight, and Leaf Miner can be shown together on one leaf." },
   { step: "05", title: "Treatment Monitoring", description: "Used U-Net segmentation to estimate disease severity across a seven-day monitoring window." },
   { step: "06", title: "Price Forecasting Pipeline", description: "Harmonized multi-year wholesale price indices from Sri Lankan DECs synchronized with Open-Meteo meteorological indicators. Trained SARIMA, Random Forest, XGBoost, GRU, and Direct Multi-Output BiLSTM models using walk-forward validation and SHAP explainability." },
-  { step: "07", title: "RAG System", description: "Connected ChromaDB and Groq Llama to generate treatment advice grounded in agricultural guidelines." },
+  { step: "07", title: "RAG System", description: "Connected ChromaDB to a hosted language model (Groq Llama for Component 1, Gemini for Component 2) to generate treatment advice grounded in agricultural guidelines." },
   { step: "08", title: "Mobile Application", description: "Integrated all AI components through Flask and FastAPI APIs in a React Native application." },
 ];
 
