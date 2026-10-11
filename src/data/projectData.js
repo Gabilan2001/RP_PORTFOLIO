@@ -14,9 +14,9 @@ export const projectInfo = {
 
 export const team = [
   { name: "Sivanesangabilan Gabilan", id: "IT22060426", role: "Team Leader", component: "Nutrient Deficiency and Fruit Disease Detection", email: "it22060426@my.sliit.lk", initials: "SG", photo: "/images/gabilan.jpg" },
-  { name: "A.L.M. Farthas", id: "IT22190734", role: "Member", component: "Leaf Disease Detection with Co-occurrence Awareness", email: "it22190734@my.sliit.lk", initials: "AF" },
+  { name: "A.L.M. Farthas", id: "IT22190734", role: "Member", component: "Leaf Disease Detection with Co-occurrence Awareness", email: "it22190734@my.sliit.lk", initials: "AF", photo: "/images/farthas.jpg" },
   { name: "Vithusha Pathmanathan", id: "IT22208262", role: "Member", component: "Disease Treatment Efficacy Monitoring", email: "IT22208262@my.sliit.lk", initials: "VP", photo: "/images/vithusha.jpg" },
-  { name: "Rashad M.P.M", id: "IT22295842", role: "Member", component: "Tomato Market Price Forecasting", email: "it22295842@my.sliit.lk", initials: "RM", github: "https://github.com/...", linkedin: "https://linkedin.com/in/..." },
+  { name: "Rashad M.P.M", id: "IT22295842", role: "Member", component: "Tomato Market Price Forecasting", email: "it22295842@my.sliit.lk", initials: "RM", photo: "/images/rashad.jpg", github: "https://github.com/...", linkedin: "https://linkedin.com/in/..." },
 ];
 
 export const components = [
