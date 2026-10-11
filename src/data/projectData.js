@@ -13,9 +13,9 @@ export const projectInfo = {
 };
 
 export const team = [
-  { name: "Sivanesangabilan Gabilan", id: "IT22060426", role: "Team Leader", component: "Nutrient Deficiency and Fruit Disease Detection", email: "it22060426@my.sliit.lk", initials: "SG" },
+  { name: "Sivanesangabilan Gabilan", id: "IT22060426", role: "Team Leader", component: "Nutrient Deficiency and Fruit Disease Detection", email: "it22060426@my.sliit.lk", initials: "SG", photo: "/images/gabilan.jpg" },
   { name: "A.L.M. Farthas", id: "IT22190734", role: "Member", component: "Leaf Disease Detection with Co-occurrence Awareness", email: "it22190734@my.sliit.lk", initials: "AF" },
-  { name: "Vithusha Pathmanathan", id: "IT22208262", role: "Member", component: "Disease Treatment Efficacy Monitoring", email: "IT22208262@my.sliit.lk", initials: "VP" },
+  { name: "Vithusha Pathmanathan", id: "IT22208262", role: "Member", component: "Disease Treatment Efficacy Monitoring", email: "IT22208262@my.sliit.lk", initials: "VP", photo: "/images/vithusha.jpg" },
   { name: "Rashad M.P.M", id: "IT22295842", role: "Member", component: "Tomato Market Price Forecasting", email: "it22295842@my.sliit.lk", initials: "RM", github: "https://github.com/...", linkedin: "https://linkedin.com/in/..." },
 ];
 
@@ -144,9 +144,9 @@ export const documents = [
 ];
 
 export const presentations = [
-  { title: "Proposal Presentation", date: "August 2024", link: "/documents/proposal-presentation.pdf", status: "available" },
-  { title: "Progress Presentation 1", date: "December 2024", link: "/documents/progress-presentation-1.pdf", status: "available" },
-  { title: "Progress Presentation 2", date: "March 2026", link: "/documents/progress-presentation-2.pdf", status: "available" },
+  { title: "Proposal Presentation", date: "March 2026", link: "/documents/proposal-presentation.pptx", status: "available" },
+  { title: "Progress Presentation 1", date: "May 2026", link: "/documents/progress-presentation-1.pptx", status: "available" },
+  { title: "Progress Presentation 2", date: "September 2026", link: "/documents/progress-presentation-2.pptx", status: "available" },
   { title: "Final Presentation", date: "May 2026", link: "/documents/final-presentation.pdf", status: "upcoming" },
 ];
 
