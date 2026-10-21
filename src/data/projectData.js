@@ -137,6 +137,8 @@ export const documents = [
   { title: "Thesis Draft - IT22208262", id: "IT22208262", category: "Thesis Draft", link: "/documents/thesis-draft-it22208262.pdf" },
   { title: "Thesis Draft - IT22295842", id: "IT22295842", category: "Thesis Draft", link: "/documents/thesis-draft-it22295842.pdf" },
   { title: "Group Report Draft - R26-SE-032", id: "GROUP", category: "Thesis Draft", link: "/documents/group-report-draft-r26-se-032.pdf" },
+  { title: "Support Letter - Department of Agriculture, Jaffna", id: "GROUP", category: "Letters", link: "/documents/doa-jaffna-support-letter.pdf" },
+  { title: "Expert Validation Letter - Department of Agriculture, Akkaraipattu East", id: "GROUP", category: "Letters", link: "/documents/doa-expert-validation-letter.pdf" },
 ];
 
 export const presentations = [
