@@ -13,10 +13,10 @@ export const projectInfo = {
 };
 
 export const team = [
-  { name: "Sivanesangabilan Gabilan", id: "IT22060426", role: "Team Leader", component: "Nutrient Deficiency and Fruit Disease Detection", email: "it22060426@my.sliit.lk", initials: "SG", photo: "/images/gabilan.jpg" },
-  { name: "A.L.M. Farthas", id: "IT22190734", role: "Member", component: "Leaf Disease Detection with Co-occurrence Awareness", email: "it22190734@my.sliit.lk", initials: "AF", photo: "/images/farthas.jpg" },
-  { name: "Vithusha Pathmanathan", id: "IT22208262", role: "Member", component: "Disease Treatment Efficacy Monitoring", email: "IT22208262@my.sliit.lk", initials: "VP", photo: "/images/vithusha.jpg" },
-  { name: "Rashad M.P.M", id: "IT22295842", role: "Member", component: "Tomato Market Price Forecasting", email: "it22295842@my.sliit.lk", initials: "RM", photo: "/images/rashad.jpg", github: "https://github.com/...", linkedin: "https://linkedin.com/in/..." },
+  { name: "Sivanesangabilan Gabilan", id: "IT22060426", role: "Team Leader", component: "Nutrient Deficiency and Fruit Disease Detection", email: "sivanesangabilan2001@gmail.com", initials: "SG", photo: "/images/gabilan.jpg" },
+  { name: "A.L.M. Farthas", id: "IT22190734", role: "Member", component: "Leaf Disease Detection with Co-occurrence Awareness", email: "m.farthas@gmail.com", initials: "AF", photo: "/images/farthas.jpg" },
+  { name: "Vithusha Pathmanathan", id: "IT22208262", role: "Member", component: "Disease Treatment Efficacy Monitoring", email: "vithusha014@gmail.com", initials: "VP", photo: "/images/vithusha.jpg" },
+  { name: "Rashad M.P.M", id: "IT22295842", role: "Member", component: "Tomato Market Price Forecasting", email: "rashadfaris4675@gmail.com", initials: "RM", photo: "/images/rashad.jpg", github: "https://github.com/...", linkedin: "https://linkedin.com/in/..." },
 ];
 
 export const components = [
@@ -146,7 +146,7 @@ export const presentations = [
   { title: "Proposal Presentation", date: "March 2026", link: "/documents/proposal-presentation.pptx", status: "available" },
   { title: "Progress Presentation 1", date: "May 2026", link: "/documents/progress-presentation-1.pptx", status: "available" },
   { title: "Progress Presentation 2", date: "September 2026", link: "/documents/progress-presentation-2.pptx", status: "available" },
-  { title: "Final Presentation", date: "May 2026", link: "/documents/final-presentation.pdf", status: "upcoming" },
+  { title: "Final Viva Presentation", date: "October 2026", link: "/documents/final-presentation.pptx", status: "available" },
 ];
 
 export const contactInfo = {
