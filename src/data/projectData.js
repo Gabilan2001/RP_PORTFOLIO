@@ -51,7 +51,6 @@ export const milestones = [
   { date: "March 2026", title: "Project Proposal (Presentation and Report)", marks: "Proposal report: 5% · Presentation: To be confirmed", description: "Project proposal presentation and report assessment.", details: "The proposed TomatoDoc solution, research gap, and methodology were presented and documented.", status: "completed", completed: true },
   { date: "May 2026 (exact date to be confirmed)", title: "Progress Presentation 1", marks: "15%", description: "First progress presentation and evaluation.", details: "Initial implementation progress, datasets, and model development were reviewed.", status: "completed", completed: true },
   { date: "September 2026 (exact date to be confirmed)", title: "Progress Presentation 2", marks: "To be confirmed", description: "Second progress presentation and evaluation.", details: "The integrated research application and the progress of all system components were reviewed.", status: "completed", completed: true },
-  { date: "4 September 2026 (ICAC 2026 submission deadline)", title: "Research Paper", marks: "To be confirmed", description: "Research paper submission for the ICAC 2026 deadline.", details: "The group research paper documents the research contribution, methodology, and results.", status: "completed", completed: true },
   { date: "Date to be confirmed", title: "System Completion", marks: "To be confirmed", description: "Completion of the integrated TomatoDoc system.", details: "Final integration, testing, documentation, and deployment activities are in progress.", status: "in-progress", completed: false },
   { date: "October 2026", title: "Research Portfolio Website", marks: "To be confirmed", description: "Completion of the research portfolio website.", details: "The public research showcase website is being prepared with project information and supporting documents.", status: "in-progress", completed: false },
   { date: "Drafts: October 2026 · Final: Date to be confirmed", title: "Thesis (Individual and Group Reports)", marks: "To be confirmed", description: "Preparation and submission of individual and group thesis reports.", details: "Draft reports are planned for October 2026, followed by final submission on the confirmed date.", status: "in-progress", completed: false },
@@ -133,14 +132,6 @@ export const documents = [
   { title: "Proposal Report - IT22190734", id: "IT22190734", category: "Proposal", link: "/documents/proposal-it22190734.pdf" },
   { title: "Proposal Report - IT22208262", id: "IT22208262", category: "Proposal", link: "/documents/proposal-it22208262.pdf" },
   { title: "Proposal Report - IT22295842", id: "IT22295842", category: "Proposal", link: "/documents/proposal-it22295842.pdf" },
-  { title: "Final Report - IT22060426", id: "IT22060426", category: "Final Report", link: "/documents/final-it22060426.pdf" },
-  { title: "Final Report - IT22190734", id: "IT22190734", category: "Final Report", link: "/documents/final-it22190734.pdf" },
-  { title: "Final Report - IT22208262", id: "IT22208262", category: "Final Report", link: "/documents/final-it22208262.pdf" },
-  { title: "Final Report - IT22295842", id: "IT22295842", category: "Final Report", link: "/documents/final-it22295842.pdf" },
-  { title: "Final Group Report", id: "GROUP", category: "Final Report", link: "/documents/final-group-report.pdf" },
-  { title: "Research Paper", id: "GROUP", category: "Other", link: "/documents/research-paper.pdf" },
-  { title: "Checklist Document", id: "GROUP", category: "Other", link: "/documents/checklist-document.pdf" },
-  { title: "Project Charter", id: "GROUP", category: "Other", link: "/documents/project-charter.pdf" },
 ];
 
 export const presentations = [

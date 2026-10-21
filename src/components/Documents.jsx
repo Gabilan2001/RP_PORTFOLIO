@@ -2,7 +2,7 @@ import { Download, Eye, FileText } from "lucide-react";
 import { useState } from "react";
 import { documents } from "../data/projectData";
 
-const categories = ["All", "Proposal", "Final Report", "Other"];
+const categories = ["All", ...new Set(documents.map(doc => doc.category))];
 export default function Documents() {
   const [active, setActive] = useState("All");
   const visible = active === "All" ? documents : documents.filter(doc => doc.category === active);
