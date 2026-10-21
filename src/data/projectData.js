@@ -128,6 +128,7 @@ export const methodology = [
 ];
 
 export const documents = [
+  { title: "Topic Assessment Form - R26-SE-032", id: "TAF", category: "Assessment", link: "/documents/TAF-R26-SE-032.pdf" },
   { title: "Proposal Report - IT22060426", id: "IT22060426", category: "Proposal", link: "/documents/proposal-it22060426.pdf" },
   { title: "Proposal Report - IT22190734", id: "IT22190734", category: "Proposal", link: "/documents/proposal-it22190734.pdf" },
   { title: "Proposal Report - IT22208262", id: "IT22208262", category: "Proposal", link: "/documents/proposal-it22208262.pdf" },
