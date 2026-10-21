@@ -132,6 +132,11 @@ export const documents = [
   { title: "Proposal Report - IT22190734", id: "IT22190734", category: "Proposal", link: "/documents/proposal-it22190734.pdf" },
   { title: "Proposal Report - IT22208262", id: "IT22208262", category: "Proposal", link: "/documents/proposal-it22208262.pdf" },
   { title: "Proposal Report - IT22295842", id: "IT22295842", category: "Proposal", link: "/documents/proposal-it22295842.pdf" },
+  { title: "Thesis Draft - IT22060426", id: "IT22060426", category: "Thesis Draft", link: "/documents/thesis-draft-it22060426.pdf" },
+  { title: "Thesis Draft - IT22190734", id: "IT22190734", category: "Thesis Draft", link: "/documents/thesis-draft-it22190734.pdf" },
+  { title: "Thesis Draft - IT22208262", id: "IT22208262", category: "Thesis Draft", link: "/documents/thesis-draft-it22208262.pdf" },
+  { title: "Thesis Draft - IT22295842", id: "IT22295842", category: "Thesis Draft", link: "/documents/thesis-draft-it22295842.pdf" },
+  { title: "Group Report Draft - R26-SE-032", id: "GROUP", category: "Thesis Draft", link: "/documents/group-report-draft-r26-se-032.pdf" },
 ];
 
 export const presentations = [
