@@ -20,7 +20,7 @@ export default function Hero() {
           </div>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#results" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#12382b] transition hover:-translate-y-1 hover:bg-[#d6ef75]">View Research <ArrowDown size={17} /></a>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#d6ef75]/70 px-6 py-3 text-sm font-bold text-[#d6ef75] transition hover:-translate-y-1 hover:bg-[#d6ef75] hover:text-[#12382b]">GitHub <ExternalLink size={16} /></a>
+            <a href="https://github.com/Gabilan2001/R26-SE-032.git" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#d6ef75]/70 px-6 py-3 text-sm font-bold text-[#d6ef75] transition hover:-translate-y-1 hover:bg-[#d6ef75] hover:text-[#12382b]">GitHub <ExternalLink size={16} /></a>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2 lg:gap-4">
